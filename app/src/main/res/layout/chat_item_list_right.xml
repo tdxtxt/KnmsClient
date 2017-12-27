@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp">
+
+    <TextView
+        android:id="@+id/chat_item_date"
+        style="@style/chat_item_date"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+    <!--自定义消息-->
+    <include
+        android:id="@+id/ll_chat_custom_content_send"
+        layout="@layout/include_chat_item_custom_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_chat_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
+
+        <com.knms.view.CircleImageView
+            android:id="@+id/chat_item_avatar"
+            style="@style/chat_item_avatar"
+            android:layout_alignParentRight="true" />
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/chat_item_layout_content"
+            style="@style/chat_item_content"
+            android:layout_toLeftOf="@id/chat_item_avatar"
+            android:background="@drawable/chat_to_bg_selector">
+            <!--文字消息-->
+            <TextView
+                android:id="@+id/chat_item_content_text"
+                android:layout_centerVertical="true"
+                style="@style/chat_item_text_content"/>
+            <!--图片消息-->
+            <ImageView
+                android:id="@+id/chat_item_content_image"
+                android:layout_centerInParent="true"
+                android:paddingRight="3dp"
+                android:layout_marginRight="2dp"
+                style="@style/chat_item_image_content"
+                android:visibility="gone"/>
+            <!--语音消息-->
+            <FrameLayout
+                android:id="@+id/message_item_audio_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/message_item_audio_playing_animation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/nim_audio_animation_list_right"
+                    android:contentDescription="@string/empty" />
+                <TextView
+                    android:id="@+id/message_item_audio_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:paddingLeft="2dp"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="12sp" />
+            </FrameLayout>
+            <!--自定义消息-->
+            <include
+                android:id="@+id/ll_chat_custom_content"
+                layout="@layout/include_chat_item_custom_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/message_item_audio_unread_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/chat_item_layout_content"
+            android:background="@drawable/nim_new_message_notify"
+            android:focusable="false"
+            android:longClickable="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/chat_item_fail"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/chat_item_layout_content"
+            android:background="@drawable/msg_state_fail_resend"
+            android:focusable="false"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/chat_item_progress"
+            style="@android:style/Widget.ProgressBar.Small.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/chat_item_layout_content"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

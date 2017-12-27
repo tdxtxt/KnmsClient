@@ -1,0 +1,199 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '24.0.2'
+    useLibrary 'org.apache.http.legacy'
+    signingConfigs {
+        releaseConfig {
+            storeFile file("knms.keystore")
+            storePassword "123456"
+            keyAlias "knms"
+            keyPassword "123456"
+        }
+    }
+    defaultConfig {
+        applicationId "com.knms.android"
+        minSdkVersion 14
+        targetSdkVersion 17
+        versionCode 14//time=2017.11.13;versionName=1.4.5;versioncode==14
+        versionName "1.4.5"
+        buildConfigField "String","SER_VERSION_CODE","\"and1127ug1149\"" //版本升级versionCode  and0710oc1101
+        multiDexEnabled true
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "6619149063449bd245899ceb", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        debug{
+            signingConfig signingConfigs.releaseConfig
+            /**
+             * api项目
+             * 开发环境: http://app.devalone.knms.com/knmsApi/
+             * 测试环境: http://app.testalone.knms.com/knmsApi/
+             * 个人服务器: http://192.168.1.234/knmsApi/ 自己换ip
+             */
+            buildConfigField "String","HOST","\"http://app.testalone.knms.com/knmsApi/\""
+            /**
+             * 小红点api项目
+             * 开发环境: http://app.devalone.knms.com/smallredspot/knms/
+             * 测试环境: http://app.testalone.knms.com/smallredspot/knms/
+             */
+            buildConfigField "String","HOST_RED","\"http://app.testalone.knms.com/smallredspot/knms/\""
+            //api更新:测试地址
+            buildConfigField "String","HOST_UPDATE","\"https://config.kebuyer.com/\""
+            //测试服务器资源路径
+            buildConfigField "String","SRC","\"http://img.test02.kebuyer.com/img/\""
+            //网络连接超时时间
+            buildConfigField "int","SOCKET_TIMEOUT","10 * 1000"
+            //是否打印LOG true-false
+            buildConfigField "Boolean","isLog","true"
+            //app名称
+            manifestPlaceholders = [APP_NAME: "测试版_客户端"]
+        }
+        release {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false //开启shrinkResources去除无用资源
+            signingConfig signingConfigs.releaseConfig
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //api1:正式地址
+            buildConfigField "String","HOST","\"https://app.kebuyer.com/\""
+            //api小红点:正式地址
+            buildConfigField "String","HOST_RED","\"https://app.kebuyer.com/smallredspot/knms/\""
+            //api更新:正式地址
+            buildConfigField "String","HOST_UPDATE","\"https://config.kebuyer.com/\""
+            //正式服务器资源路径
+            buildConfigField "String","SRC","\"https://img.kebuyer.com/img/\""
+            //网络连接超时时间
+            buildConfigField "int","SOCKET_TIMEOUT","10 * 1000"
+            //是否打印LOG true-false
+            buildConfigField "Boolean","isLog","true"
+            //app名称
+            manifestPlaceholders = [APP_NAME: "铠恩买手"]
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (variant.buildType.name == 'release') {
+                def fileName = "kebuyer_client_${defaultConfig.versionName}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }else if(variant.buildType.name == 'debug'){
+                def fileName = "debug_kebuyer_${defaultConfig.versionCode}_${defaultConfig.versionName}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs/jniLibs']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+//        android.applicationVariants.all { variant ->
+//            tasks.all { task ->
+//                if (task.name.startsWith("prepare") && task.name.endsWith("Dependencies")) {
+//                    task.doLast {
+//                        findJniAndRemove("${buildDir}/intermediates/exploded-aar")
+//                    }
+//                }
+//            }
+//        }
+}
+
+dependencies {
+    compile fileTree(include: '**/*.jar', dir: 'libs')
+    compile project(':sharelibrary')
+    compile 'io.reactivex:rxjava:latest.integration'
+    compile 'io.reactivex:rxandroid:latest.integration'
+    compile 'com.squareup.okhttp3:okhttp:latest.integration'
+    compile 'com.squareup.okhttp3:logging-interceptor:latest.integration'
+    compile 'com.squareup.retrofit2:retrofit:latest.integration'
+    compile 'com.squareup.retrofit2:converter-gson:latest.integration'
+    compile 'com.squareup.retrofit2:adapter-rxjava:latest.integration'
+    //    compile ('ren.yale.android:retrofitcachelib:0.2.1') {
+    //        exclude module: 'okhttp-urlconnection', group: 'com.squareup.okhttp3'
+    //        exclude module: 'retrofit', group: 'com.squareup.retrofit2'
+    //        exclude module: 'rxjava', group: 'io.reactivex'
+    //        exclude module: 'adapter-rxjava', group: 'com.squareup.retrofit2'
+    //    }
+    //    compile 'com.github.lawloretienne:quickreturn:latest.integration'
+    compile 'com.umeng.analytics:dplus:6.0.6.001'
+    compile 'com.nineoldandroids:library:2.4.0'
+    // im聊天基础功能 (必需)---64位库引起问题解决方案:http://bbs.netease.im/read-tid-236
+    compile 'com.netease.nimlib:basesdk:3.4.0'
+    //图片收缩控件
+    compile 'com.bm.photoview:library:1.4.1'
+    //解决方法数超过64k限制
+    compile 'com.android.support:multidex:1.0.0'
+    //内存泄露检查工具
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //腾讯错误分析
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //极光推送
+    compile 'cn.jiguang.sdk:jpush:3.0.0'
+    compile 'cn.jiguang.sdk:jcore:1.0.0'
+    //    compile'com.squareup.picasso:picasso:2.5.2'
+    //    compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //点赞
+    compile 'com.wx.goodview:goodview:1.0.0'
+    //滑动黏性工具类 使用教程https://github.com/EverythingMe/overscroll-decor
+    compile('me.everything:overscroll-decor-android:1.0.4') {
+        exclude module: 'recyclerview-v7'
+    }
+    //图片加载进度
+    compile 'com.jpeng:LoadingProgress:1.1.0'
+    //存储
+    compile 'com.orhanobut:hawk:2.0.1'
+    //沉侵式状态栏 https://github.com/gyf-dev/ImmersionBar
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+    //桌面小红点
+    //compile 'me.leolin:ShortcutBadger:1.1.19@aar'
+}
+void findJniAndRemove(String str) {
+    File file = new File(str)
+    if (file != null && file.isDirectory()) {
+        File[] dirs = file.listFiles()
+        for (File dir : dirs) {
+            if (dir.getName().contains("jni") && dir.isDirectory()) {
+                String[] libs = dir.list()
+                for (String lib : libs) {
+                    boolean remove = false
+                    if (lib.equals("arm64-v8a")) {
+                        remove = true
+                    }
+                    if (lib.equals("mips")) {
+                        remove = true
+                    }
+                    if (lib.equals("mips64")) {
+                        remove = true
+                    }
+                    if (lib.equals("x86_64")) {
+                        remove = true
+                    }
+                    if (remove) {
+                        String dest = new File(dir, lib).getPath()
+                        delete("${dest}")
+                    }
+                }
+            } else {
+                findJniAndRemove(dir.getAbsolutePath())
+            }
+        }
+    }
+}

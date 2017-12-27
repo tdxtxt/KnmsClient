@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <translate
+        android:duration="300"
+        android:fillEnabled="true"
+        android:fromYDelta="100.0%p"
+        android:interpolator="@android:anim/decelerate_interpolator"
+        android:toYDelta="0.0%p"
+        android:zAdjustment="top" />
+    <!-- 
+    duration 动画持续时间
+    fillEnabled 在动画结束时，将控件还原到初始化状态
+    fromYDelta 起始点Y轴从标，可以是数值、百分数、百分数p 三种样式；
+    toYDelta 结束点Y轴坐标
+    interpolator 设定插值器，其实就是指定的动作效果，比如弹跳效果等  decelerate_interpolator减速
+    zAdjustment 定义动画z order的变换
+     -->
+
+</set>

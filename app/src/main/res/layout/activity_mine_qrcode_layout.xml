@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/color_white_F5F5F5"
+    android:layout_height="match_parent">
+    <include layout="@layout/top_title_layout"/>
+    PullToRefreshScrollView
+  <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+      android:id="@+id/ptr_mine_code"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="20dp"
+      app:ptrIsShowLoadMoreView="false"
+      app:ptrIsShowRefreshView="false"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/bg_rectangle_whilte"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_mine_qr_code"
+            android:layout_width="250dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <View style="@style/line_comm_style"/>
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/color_black_333333"
+            android:text="名称"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/color_black_666666"
+            android:text="请向收银员展示您的二维码"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/color_black_666666"
+            android:text="以便绑定您的订单信息"/>
+
+    </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

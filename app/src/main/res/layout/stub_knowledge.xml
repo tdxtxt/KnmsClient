@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp" >
+        <View
+            style="@style/line_comm_style"
+            android:layout_alignParentTop="true" />
+
+        <View
+            style="@style/line_comm_style"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="家居百科  KNOWLEDGE"
+            android:textColor="#333333"
+            android:textSize="16dp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/more_knowledge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="更多"
+            android:textColor="#666666"
+            android:textSize="12dp" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@+id/more_knowledge"
+            android:background="#666666" />
+    </RelativeLayout>
+
+    <com.knms.view.banner.AutoViewPager
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/vp_knowledge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.knms.view.banner.AutoViewPager>
+</LinearLayout>

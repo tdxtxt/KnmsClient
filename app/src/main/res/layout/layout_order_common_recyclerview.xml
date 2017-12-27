@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/item_order_layout"/>
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshRecyclerView
+        android:layout_above="@+id/tv_topay"
+        android:id="@+id/recyclerview_order"
+        android:background="@color/color_white_F5F5F5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.handmark.pulltorefresh.library.PullToRefreshRecyclerView>
+
+
+
+    <TextView
+        android:id="@+id/tv_topay"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_rectangle_btn"
+        android:gravity="center"
+        android:text="去付尾款"
+        android:textColor="@color/color_black_333333"
+        android:textSize="14dp" />
+
+</RelativeLayout>

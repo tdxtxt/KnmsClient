@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="no_color">#00000000</color>
+    <!--==============黄色=================-->
+    <color name="radiobutton_text_on">#ffe816</color>
+    <color name="indicator_color_current_page">#FBE93D</color>
+    <color name="tab_line">#FFE816</color>
+    <color name="huang_FFDC50">#FFDC50</color>
+    <color name="yellow">#FFD400</color>
+    <!--==============灰色=================-->
+    <color name="color_gray_757572">#757572</color>
+    <color name="color_gray_999999">#999999</color>
+    <color name="common_gray">#CCCCCC</color>
+    <color name="color_grag_b3b3b3">#b3b3b3</color>
+    <color name="common_line_color">#E5E5E5</color>
+    <color name="indicator_color_other_page">#EEEEEE</color>
+    <color name="color_gray_d9d9d9">#d9d9d9</color>
+
+    <!--==============黑色=================-->
+    <color name="black">#333333</color>
+    <color name="color_black_666666">#666666</color>
+    <color name="color_black_333333">#333333</color>
+    <color name="color_black_000000">#000000</color>
+    <color name="button_text_on">#333333</color>
+    <color name="text_color_black">#333333</color>
+    <color name="black_24221E">#24221E</color>
+    <color name="black_cc222222">#cc222222</color>
+    <color name="color_black_6c6c6c">#6C6C6C</color>
+    <color name="color_black_434343">#434343</color>
+    <!--==============红色=================-->
+    <color name="color_red_FB6161">#FB6161</color>
+    <color name="common_red">#FB6161</color>
+    <color name="color_red_EE4B62">#ee4b62</color>
+    <color name="color_red_ccfa3c55">#ccfa3c55</color>
+    <!--==============白色=================-->
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_white_F5F5F5">#F5F5F5</color>
+    <!--==============绿色=================-->
+    <!--==============蓝色=================-->
+    <color name="blue_208DF5">#208DF5</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="idle_class1">#F2F2F2</color>
+    <color name="idle_class2">#F7F7F7</color>
+    <color name="blue_EDFAFF">#EDFAFF</color>
+
+    <color name="gray_c7c7c7">#c7c7c7</color>
+    <color name="gray_aaaaaa">#aaaaaa</color>
+    <color name="gray_e0e0e0">#e0e0e0</color>
+    <color name="gray_f4f4f4">#f4f4f4</color>
+    <color name="color_fafafa">#FAFAFA</color>
+    <color name="status_bar_textcolor">#333333</color>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:stick="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top"
+        layout="@layout/top_title_layout" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshHeaderViewPager
+        android:layout_below="@+id/top"
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/id_stickynavlayout_topview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ViewStub
+                android:id="@+id/vs_banner_advertisement"
+                android:layout="@layout/view_advertisement_banner"
+                android:layout_width="match_parent"
+                android:layout_height="180dp" />
+        </RelativeLayout>
+
+        <com.knms.view.PagerSlidingTabStrip
+            android:id="@+id/id_stickynavlayout_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_pager_tab_strip"
+            app:pstsTabPaddingLeftRight="15dp"
+            app:pstsUnderlineColor="@android:color/transparent" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_stickynavlayout_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.handmark.pulltorefresh.library.PullToRefreshHeaderViewPager>
+    <ImageButton
+        android:id="@+id/btn_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/top"
+        android:background="@color/no_color"/>
+
+
+</RelativeLayout>

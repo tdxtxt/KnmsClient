@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="key_tag_position">positon</string>
+    <string name="app_name">铠恩买手</string>
+
+    <string name="still_loading_tip">加载中...</string>
+    <string name="empty"></string>
+    <string name="leftButtonText">拍照求购</string>
+    <string name="rightButtonText">从草稿发布</string>
+
+    <string name="net_broken">当前网络不可用</string>
+    <string name="nim_status_unlogin">正在尝试重新连接...</string>
+    <string name="nim_status_connecting">连接中...</string>
+    <string name="nim_status_logining">登录中...</string>
+
+    <string name="image">图片</string>
+    <string name="maxnum">最多添加%1$d张图片</string>
+    <string name="all_images">所有图片</string>
+    <string name="sd_disable">SD卡不可用</string>
+    <string name="confirm">发送(%1$d/%2$d)</string>
+    <string name="confirm_single">确定</string>
+    <string name="open_camera_failure">打开相机失败</string>
+    <string name="permission_denied">请打开相机权限</string>
+    <string name="idle_release">发布</string>
+
+    <string name="to_expand_hint">全文</string>
+    <string name="to_shrink_hint">收起</string>
+</resources>

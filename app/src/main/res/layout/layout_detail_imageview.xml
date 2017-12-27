@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.knms.view.banner.AutoViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="360dp"
+    android:background="@drawable/icon_3"
+    android:id="@+id/vp_detail_img">
+
+</com.knms.view.banner.AutoViewPager>

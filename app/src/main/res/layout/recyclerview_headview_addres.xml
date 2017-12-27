@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_notdefault_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:drawableRight="@drawable/right_arrow"
+        android:padding="10dp"
+        android:text="*请填写收货信息"
+        android:textColor="@color/common_red"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/view_address"
+        layout="@layout/item_order_address_layout"
+        android:visibility="gone" />
+
+    <View style="@style/line_comm_style" />
+
+</LinearLayout>

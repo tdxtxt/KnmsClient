@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp"
+        style="@style/line_comm_style"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/custom_service_img"
+            android:layout_width="20dp"
+            android:layout_centerVertical="true"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/bao" />
+        <TextView
+            android:id="@+id/custom_service_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/custom_service_img"
+            android:layout_marginLeft="10dp"
+            android:text="运费险"
+            android:textColor="#fb6161"
+            android:textSize="14dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="了解详情"
+            android:id="@+id/tvBtn_detail"
+            android:visibility="visible"
+            android:layout_toLeftOf="@+id/iv_arrow"
+            android:textSize="14dp"
+            android:textColor="@color/color_gray_999999"/>
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/qiepian_33" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/custom_service_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/custom_service_name"
+        android:layout_below="@+id/custom_service_name"
+        android:text="中国人寿保险"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#767676"
+        android:layout_marginBottom="10dp"
+        android:textSize="12dp" />
+</LinearLayout>

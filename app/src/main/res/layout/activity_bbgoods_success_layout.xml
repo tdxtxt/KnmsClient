@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toplayout"
+        layout="@layout/top_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_notifymerchant_gradual"
+        android:layout_height="240dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="@color/color_white_F5F5F5"
+            android:layout_height="200dp">
+
+            <com.knms.view.CirclePercentViews
+                android:id="@+id/circleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageview_anim"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@color/color_white_F5F5F5"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/progress_bar" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_circle_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="已为您通知商家"
+                    android:textColor="@color/color_black_333333" />
+
+                <TextView
+                    android:id="@+id/tv_push_merchant_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="@color/color_black_666666"
+                    android:textSize="38sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#f2f2f2"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:background="@drawable/bg_rectangle_lightgray"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:text="户" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="15dp"
+            android:gravity="center"
+            android:text="你可以在“我的-求购/比货”中查看比货记录"
+            android:textColor="@color/color_black_666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="@color/color_white"
+        android:layout_height="match_parent">
+
+        <View
+            android:background="@drawable/bg_notifymerchant_gradual2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/all_merchant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <RelativeLayout
+            android:id="@+id/rl_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_line_color"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

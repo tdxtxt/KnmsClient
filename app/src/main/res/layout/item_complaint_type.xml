@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/quality_problem"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:layout_weight="1"
+    android:background="@drawable/complaint_type_selector"
+    android:gravity="center"
+    android:text="质量问题"
+    android:textColor="@color/complaint_type_txt_color"
+    android:layout_marginLeft="10dp"
+    android:layout_marginBottom="10dp"
+    android:textSize="12dp" />

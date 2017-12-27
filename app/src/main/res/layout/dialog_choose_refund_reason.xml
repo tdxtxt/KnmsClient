@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/no_color"
+    android:minHeight="240dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tvBtn_cancel"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#2F8EFF" />
+
+            <TextView
+                android:id="@+id/tvBtn_confirm"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="#2F8EFF" />
+        </RelativeLayout>
+
+        <View style="@style/line_comm_style" />
+
+        <com.knms.view.wheel.SpWheelView
+            android:id="@+id/wv_all_reason"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</RelativeLayout>

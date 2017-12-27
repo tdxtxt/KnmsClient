@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_contact_seller"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_order_contactseller" />
+
+        <TextView
+            android:id="@+id/tv_contact_seller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系卖家"
+            android:textColor="@color/common_red" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/common_line_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_seller_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_order_phonestore" />
+
+        <TextView
+            android:id="@+id/tv_seller_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商家电话"
+            android:textColor="@color/common_red" />
+    </LinearLayout>
+
+</LinearLayout>

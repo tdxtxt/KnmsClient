@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_white_F5F5F5" />
+
+    <View style="@style/line_comm_style" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/order_shopname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_shop"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:text="彼岸阳光家纺店"
+            android:textColor="@color/color_black_333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_complaint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@+id/tv_trading_status"
+            android:scaleType="centerInside"
+            android:src="@drawable/ts" />
+
+        <TextView
+            android:id="@+id/tv_trading_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="10dp"
+            android:text="已付款"
+            android:textColor="@color/common_red"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View style="@style/line_comm_style" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_order_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <View style="@style/line_comm_style" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_order_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_order_freight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <View style="@style/line_comm_style" />
+
+    <LinearLayout
+        android:id="@+id/ll_order_bottom_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/btn_order_state_left"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_gray_textview_rectangle"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="取消订单"
+            android:textColor="@color/color_black_333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btn_order_state_right"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_rectangle_msg_btn"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="去付款"
+            android:textColor="@color/color_black_333333"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

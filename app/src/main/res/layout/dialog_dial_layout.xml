@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/color_white_F5F5F5"
+    android:layout_height="match_parent">
+    <com.knms.view.listview.MaxHightListView
+        android:id="@+id/listview_phone_number"
+        android:background="@color/color_white"
+        android:divider="@color/common_line_color"
+        android:dividerHeight="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.knms.view.listview.MaxHightListView>
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:text="取消"
+        android:padding="15dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="@color/black"/>
+
+</LinearLayout>

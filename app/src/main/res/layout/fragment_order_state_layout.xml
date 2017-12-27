@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_F5F5F5">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pull_to_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ptrIsShowLoadMoreView="false"
+        android:layout_above="@+id/ll_see_evaluation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="8dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#fffbf2"
+                android:orientation="vertical">
+
+                <com.knms.view.TimeLineView
+                    android:id="@+id/timeLineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:visibility="invisible"
+                    android:layout_alignLeft="@+id/textView3"
+                    android:layout_alignStart="@+id/textView3"
+                    android:layout_margin="10dp"
+                    app:lineWidth="5dp"
+                    app:preStringColor="#00ff00"
+                    app:startedStringColor="#ff0000" />
+
+                <TextView
+                    android:id="@+id/tv_state_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#FEB92C"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_comm_style"
+                android:layout_marginTop="8dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_shopinfo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white">
+
+                <com.knms.view.CircleImageView
+                    android:id="@+id/iv_shop_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_7" />
+
+                <TextView
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/iv_shop_logo" />
+
+                <TextView
+                    android:id="@+id/tv_telephone_connection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_border_gray_rectangle"
+                    android:padding="5dp"
+                    android:text="电话联系" />
+
+                <TextView
+                    android:id="@+id/tv_online_connection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/tv_telephone_connection"
+                    android:background="@drawable/bg_border_gray_rectangle"
+                    android:padding="5dp"
+                    android:text="在线联系" />
+
+                <View
+                    android:layout_alignParentBottom="true"
+                    style="@style/line_comm_style" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_order_complaint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_order_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_see_evaluation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+        <View style="@style/line_comm_style" />
+
+        <TextView
+            android:id="@+id/tv_see_evaluation"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_rectangle_btn"
+            android:gravity="center"
+            android:text="查看评价" />
+
+    </LinearLayout>
+</RelativeLayout>

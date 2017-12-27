@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:background="@color/color_white">
+
+    <CheckBox
+        android:id="@+id/store_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:button="@drawable/checkbox_choose_pay_order" />
+
+    <TextView
+        android:id="@+id/store_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/store_checkBox"
+        android:drawableLeft="@drawable/icon_shop"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/icon_right_arrow_1"
+        android:gravity="center_vertical"
+        android:text="小马的店铺"
+        android:textColor="@color/color_black_333333"
+        android:textSize="14sp" />
+</RelativeLayout>

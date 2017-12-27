@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_title"
+        layout="@layout/top_title_layout" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E6E6E6" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/sign_48"
+        android:drawablePadding="4dp"
+        android:text="为了您的账户安全请设置密码"
+        android:textSize="14dp"
+        android:textColor="#fdcd00" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center" >
+        
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:text="设置密码"
+            android:textSize="14dp"
+            android:textColor="#333333" />
+
+        <EditText
+            android:id="@+id/set_password"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv"
+            android:layout_marginLeft="10dp"
+            android:hint="请输入6~32位字母数字组合"
+            android:maxLength="32"
+            android:password="true"
+            android:textSize="14dp"
+            android:background="#00000000" />
+        
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@+id/visible"
+            android:layout_centerVertical="true"
+            android:padding="4dp"
+            android:src="@drawable/sign_67"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:padding="4dp"
+            android:src="@drawable/sign_75" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E6E6E6" />
+
+    <TextView
+        android:id="@+id/registration"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:padding="10dp"
+        android:background="@drawable/sign_52"
+        android:gravity="center"
+        android:text="立即注册"
+        android:textSize="14dp"
+        android:textColor="#999999" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal" >
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            android:text="登录/注册代表你已同意"
+            android:textSize="10dp"
+            android:textColor="#999999" />
+        <TextView
+            android:id="@+id/agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            android:layout_toRightOf="@+id/text"
+            android:text="《铠恩买手协议》"
+            android:textColor="#f4d66d"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+</LinearLayout>

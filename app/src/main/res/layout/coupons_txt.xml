@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="25dp"
+    android:background="@color/color_white"
+    android:paddingLeft="2dp"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignTop="@+id/img_left"
+        android:layout_toLeftOf="@+id/img_right"
+        android:layout_toRightOf="@+id/img_left"
+        android:background="#FB6161" />
+
+    <ImageView
+        android:id="@+id/img_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/quan_48" />
+
+    <ImageView
+        android:id="@+id/img_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/quan_50" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/img_left"
+        android:layout_toLeftOf="@+id/img_right"
+        android:layout_toRightOf="@+id/img_left"
+        android:background="#FB6161" />
+
+    <TextView
+        android:id="@+id/coupons_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:textSize="12sp"
+        android:layout_centerInParent="true"
+        android:text="满200减50"
+        android:textColor="#FB6161"/>
+
+</RelativeLayout>

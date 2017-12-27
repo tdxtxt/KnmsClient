@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_white"
+        android:id="@+id/view"/>
+    <RelativeLayout
+        android:id="@+id/rlTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:src="@drawable/sign_63" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableRight="@drawable/icon_only_down"
+            android:text="全部图片"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/color_black_333333"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tvPosition"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/33"
+            android:maxLength="12"
+            android:maxLines="1"
+            android:visibility="gone"
+            android:textColor="@color/color_black_333333"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:background="#E0E0E0"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="发送"
+            android:textColor="@color/color_gray_999999"
+            android:textSize="16sp" />
+
+        <View
+            style="@style/line_comm_style"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <com.knms.view.VerticalDrawerLayout
+        android:id="@+id/menu_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/fmImageList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_albumFolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.knms.view.VerticalDrawerLayout>
+
+</LinearLayout>

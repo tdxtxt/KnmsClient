@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_cancel"
+    android:background="@color/no_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvBtn_complete"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="完成"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="#4D4D4D"/>
+            <View style="@style/line_comm_style"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="价格"
+                        android:textColor="#4D4D4D"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:hint="￥0"
+                        android:textCursorDrawable="@null"
+                        android:background="@null"
+                        android:textColor="#4D4D4D"
+                        android:inputType="number"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_line_color" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="原价"
+                        android:textColor="#4D4D4D"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_orprice"
+                        android:layout_width="wrap_content"
+                        android:minWidth="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:hint="￥0"
+                        android:textCursorDrawable="@null"
+                        android:background="@null"
+                        android:textColor="#4D4D4D"
+                        android:inputType="number"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/line_comm_style" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="运费"
+                        android:textColor="#4D4D4D"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_freight"
+                        android:layout_width="wrap_content"
+                        android:minWidth="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:hint="￥0"
+                        android:background="@null"
+                        android:textColor="#4D4D4D"
+                        android:textCursorDrawable="@null"
+                        android:inputType="numberDecimal"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/common_line_color" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbox_baoyou"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="包邮"
+                        android:textColor="#4D4D4D"
+                        android:textSize="16sp"
+                        android:drawableRight="@drawable/checkbox_selector_yellow"
+                        android:paddingLeft="45dp"
+                        android:paddingRight="70dp"
+                        android:button="@null"
+                        android:checked="false"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

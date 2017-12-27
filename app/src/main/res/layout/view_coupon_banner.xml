@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+    <com.knms.view.banner.AutoViewPager
+        android:id="@+id/vp_banner_advertisement"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_height="150dp">
+    </com.knms.view.banner.AutoViewPager>
+    <com.knms.view.banner.CirclePageIndicator
+        android:id="@+id/cpi_banner_advertisement"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:padding="5dp"
+        app:fillColor="@color/indicator_color_current_page"
+        app:pageColor="@color/color_gray_999999"
+        app:radius="3dp"
+        app:strokeWidth="0dp" />
+
+</LinearLayout>

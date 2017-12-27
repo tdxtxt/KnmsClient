@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/detail_top">
+    <RelativeLayout
+        android:id="@+id/rl_border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@drawable/bg_top_tab" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@drawable/icon_details_top_back" />
+            <TextView
+                android:id="@+id/tv_title_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/ll_detail_right"
+                android:layout_toRightOf="@+id/iv_back"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/color_black_333333"
+                android:textSize="16dp" />
+            <LinearLayout
+                android:id="@+id/ll_detail_right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp">
+
+                    <ImageView
+                        android:id="@+id/iv_shopping_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_details_top_shoppingcart" />
+
+                    <com.knms.view.tv.MsgTipText
+                        android:id="@+id/tv_shppingcart_count"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/color_white"
+                        android:textSize="12dp" />
+                </FrameLayout>
+
+
+                <ImageView
+                    android:id="@+id/home_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:layout_toLeftOf="@+id/information"
+                    android:layout_toRightOf="@+id/iv_fast_bb_goods"
+                    android:padding="4dp"
+                    android:src="@drawable/icon_details_top_home" />
+
+
+                <ImageView
+                    android:id="@+id/information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="16dp"
+                    android:padding="4dp"
+                    android:src="@drawable/icon_details_top_chat" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.knms.view.banner.AutoViewPager
+        android:id="@+id/vp_guide_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.knms.view.banner.AutoViewPager>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <TextView
+            android:id="@+id/tv_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳过"
+            android:textColor="@color/color_white"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:layout_gravity="right"
+            android:layout_margin="15dp"
+            android:background="@drawable/icon_translucence_oval"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_above="@+id/cpi_guide_page"
+            android:id="@+id/tv_into_app"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="55dp"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_into_app" />
+        <com.knms.view.banner.CirclePageIndicator
+            android:id="@+id/cpi_guide_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="5dp"
+            app:fillColor="@color/indicator_color_current_page"
+            app:pageColor="@color/indicator_color_other_page"
+            app:radius="4dp"
+            app:strokeWidth="0dp" />
+    </LinearLayout>
+
+</RelativeLayout>

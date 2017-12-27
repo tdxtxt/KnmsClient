@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@drawable/checkbox_choose_pay_order" />
+        <RelativeLayout
+            android:id="@+id/rlBtn_pic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp">
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="75dp"
+            android:layout_height="75dp"/>
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="暂未\n开抢"
+                android:textColor="@color/color_white"
+                android:textSize="11sp"
+                android:visibility="gone"
+                android:background="@drawable/bg_circle"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <LinearLayout
+                android:id="@+id/layout_complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="皓齿 - 三透剧项目设 + 白色床头柜抽屉柜三辰收纳柜储存柜"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_specs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="颜色:红色 尺寸:60*300*1800(mm)"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/color_gray_999999"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥780"
+                        android:textColor="@color/common_red"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_orprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/tv_price"
+                        android:text="￥1200"
+                        android:textColor="@color/color_gray_999999"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text=""
+                        android:textColor="@color/color_gray_999999"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.knms.view.tv.CounterView
+                    android:id="@+id/countView"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_specs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_specs_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/iv_arrow"
+                        android:layout_marginTop="6dp"
+                        android:text="颜色:红色 尺寸:60*300*1800(mm)"
+                        android:textColor="@color/color_gray_999999"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/icon_bottom_arrow" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        style="@style/line_comm_style"/>
+</LinearLayout>

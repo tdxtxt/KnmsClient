@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_F5F5F5">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/ll_bottom_layout"
+        android:layout_below="@+id/order_details_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_order_details_top"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_refund_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款中"
+                    android:textColor="@color/color_white"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_refund_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="退款中，请耐心等候"
+                    android:textColor="@color/color_white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <View
+                style="@style/line_comm_style"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/color_white"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="退款信息"
+                android:textColor="@color/color_black_333333"
+                android:textSize="14sp" />
+
+            <View style="@style/line_comm_style" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/color_white"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_product_img"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="match_parent"
+                    android:maxLines="2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_product_img"
+                    android:textColor="@color/color_black_333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_below="@+id/tv_product_name"
+                    android:id="@+id/tv_product_attribute"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iv_product_img"
+                    android:textColor="@color/color_black_666666"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <View style="@style/line_comm_style" />
+
+            <TextView
+                android:id="@+id/tv_recedeReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:padding="10dp"
+                android:textColor="@color/color_gray_999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_refund_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:padding="10dp"
+                android:textColor="@color/color_gray_999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_createTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:padding="10dp"
+                android:textColor="@color/color_gray_999999"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_recedeto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:padding="10dp"
+                android:textColor="@color/color_gray_999999"
+                android:textSize="14sp" />
+
+            <View style="@style/line_comm_style" />
+
+            <TextView
+                android:id="@+id/tv_refunds_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="·退款申请不可撤销，如需撤销请联系客服"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_order_comm_contact_seller" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/order_details_top"
+        layout="@layout/top_title_layout" />
+
+
+</RelativeLayout>

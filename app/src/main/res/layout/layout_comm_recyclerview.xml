@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#F4F4F4"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshRecyclerView
+        android:id="@+id/refresh_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_line_color"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_layout"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_gray_999999"
+            android:text="没有更多有效券了 | "/>
+
+        <TextView
+            android:id="@+id/tv_select_invalid"
+            android:layout_width="wrap_content"
+            android:textColor="@color/color_gray_999999"
+            android:layout_height="wrap_content"
+            android:text="查看无效券>>"/>
+    </LinearLayout>
+</RelativeLayout>

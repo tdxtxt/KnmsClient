@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_title_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white_F5F5F5">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_release">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="为商家打分"
+                            android:textColor="@color/color_black_6c6c6c"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_toLeftOf="@+id/tv_center"
+                            android:background="@color/gray_c7c7c7" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_toRightOf="@+id/tv_center"
+                            android:background="@color/gray_c7c7c7" />
+                    </RelativeLayout>
+                    <com.knms.view.Star
+                        android:id="@+id/ratingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        app:starWidth ="30dp"
+                        app:starHeight ="30dp"
+                        app:starsNum ="5"
+                        app:startMark="5.0"
+                        app:starDistance ="12dp"
+                        app:starClickable="true"
+                        app:starBackground ="@drawable/star_border_hide_big"
+                        app:starDrawBackground ="@drawable/star_border_show_big"/>
+                    <TextView
+                        android:id="@+id/tv_grade_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="非常满意"
+                        android:textColor="@color/yellow"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <com.knms.view.ScrollEditText
+                    android:id="@+id/edit_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_white"
+                    android:scrollbars="vertical"
+                    android:scrollbarStyle="insideInset"
+                    android:gravity="top"
+                    android:hint="请写下您对本次购物的评价，如：商品质量、物流送货、商家服务等"
+                    android:maxLength="200"
+                    android:padding="10dp"
+                    android:textColor="#333333"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_calczise"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:text="0/200" />
+
+                <com.knms.view.AddPhotoView
+                    android:id="@+id/addPhotoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_white" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_release"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_rectangle_btn"
+            android:text="发布"
+            android:textColor="@color/color_black_666666"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</LinearLayout>

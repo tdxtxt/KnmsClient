@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<item android:drawable="@drawable/loading1" android:duration="500"/>
+    <item android:drawable="@drawable/loading2" android:duration="500"/>
+    <item android:drawable="@drawable/loading3" android:duration="500"/>
+    <item android:drawable="@drawable/loading4" android:duration="500"/>-->
+
+    <item android:drawable="@drawable/loading_1" android:duration="60"/>
+    <item android:drawable="@drawable/loading_3" android:duration="60"/>
+    <item android:drawable="@drawable/loading_5" android:duration="60"/>
+    <item android:drawable="@drawable/loading_7" android:duration="60"/>
+    <item android:drawable="@drawable/loading_10" android:duration="60"/>
+    <item android:drawable="@drawable/loading_12" android:duration="60"/>
+    <item android:drawable="@drawable/loading_15" android:duration="60"/>
+    <item android:drawable="@drawable/loading_18" android:duration="60"/>
+    <item android:drawable="@drawable/loading_20" android:duration="60"/>
+    <item android:drawable="@drawable/loading_22" android:duration="60"/>
+    <item android:drawable="@drawable/loading_25" android:duration="60"/>
+    <item android:drawable="@drawable/loading_27" android:duration="60"/>
+    <item android:drawable="@drawable/loading_30" android:duration="60"/>
+    <item android:drawable="@drawable/loading_33" android:duration="60"/>
+    <item android:drawable="@drawable/loading_35" android:duration="60"/>
+    <item android:drawable="@drawable/loading_37" android:duration="60"/>
+    <item android:drawable="@drawable/loading_40" android:duration="60"/>
+    <item android:drawable="@drawable/loading_42" android:duration="60"/>
+    <item android:drawable="@drawable/loading_45" android:duration="60"/>
+    <item android:drawable="@drawable/loading_48" android:duration="60"/>
+    <item android:drawable="@drawable/loading_52" android:duration="60"/>
+    <item android:drawable="@drawable/loading_55" android:duration="60"/>
+    <item android:drawable="@drawable/loading_57" android:duration="60"/>
+    <item android:drawable="@drawable/loading_60" android:duration="60"/>
+    <item android:drawable="@drawable/loading_63" android:duration="60"/>
+    <item android:drawable="@drawable/loading_65" android:duration="60"/>
+    <item android:drawable="@drawable/loading_67" android:duration="60"/>
+    <item android:drawable="@drawable/loading_70" android:duration="60"/>
+    <item android:drawable="@drawable/loading_72" android:duration="60"/>
+    <item android:drawable="@drawable/loading_75" android:duration="60"/>
+</animation-list>

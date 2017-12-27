@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--banner-->
+    <ViewStub
+        android:id="@+id/vs_banner_advertisement"
+        android:layout_width="match_parent"
+        android:layout_height="231dp"
+        android:layout="@layout/view_advertisement_banner" />
+    <!--菜单图标-->
+    <ViewStub
+        android:id="@+id/vs_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout="@layout/stub_menu" />
+
+    <!--极速找货-->
+    <ViewStub
+        android:id="@+id/vs_a12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/stub_a10" />
+
+    <!-- 买手特价 -->
+    <ViewStub
+        android:id="@+id/vs_mstj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/stub_mstj" />
+
+    <!--爆款推荐-->
+    <ViewStub
+        android:id="@+id/vs_product_special"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/stub_product_special" />
+    <!--定制家具-->
+    <ViewStub
+        android:id="@+id/vs_banner_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/stub_custom_advertisement_banner" />
+    <!--家具风格-->
+    <ViewStub
+        android:id="@+id/vs_product_home_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/stub_product_home_style" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/no_color"/>
+    <!--买手活动-->
+    <ViewStub
+        android:id="@+id/vs_product_act"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/stub_product_act" />
+    <!--闲置家具-->
+    <ViewStub
+        android:id="@+id/vs_product_idle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/stub_product_idle" />
+    <!--家具百科-->
+    <ViewStub
+        android:id="@+id/vs_knowledge"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout="@layout/stub_knowledge" />
+    <!--列表广告位-->
+    <ViewStub
+        android:id="@+id/vs_a8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/stub_a8" />
+    <!--web广告位-->
+    <ViewStub
+        android:id="@+id/vs_a9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/stub_a9" />
+</merge>

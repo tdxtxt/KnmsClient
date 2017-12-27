@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/color_white"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/item_order_address_layout"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/cb_default_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/setting_checkbox_style"
+                android:text="默认地址"
+                android:button="@null"
+                android:padding="10dp"
+                android:textColor="@color/color_default_addres_selector"/>
+
+            <TextView
+                android:id="@+id/tv_edit_address"
+                android:layout_toLeftOf="@+id/tv_delete_addres"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_black_666666"
+                android:drawableLeft="@drawable/icon_edit"
+                android:text="编辑"/>
+            <TextView
+                android:id="@+id/tv_delete_addres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/search_del"
+                android:layout_centerVertical="true"
+                android:textColor="@color/color_black_666666"
+                android:text="删除"/>
+        </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_white_F5F5F5"/>
+
+</LinearLayout>

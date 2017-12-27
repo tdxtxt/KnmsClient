@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_title"
+        layout="@layout/top_title_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="账号密码登录"
+        android:textColor="#333333"
+        android:textStyle="normal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/edit_phone"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="#00000000"
+            android:drawableLeft="@drawable/sign_44"
+            android:drawablePadding="4dp"
+            android:hint="请输入你的电话号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="#333333"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/cancel_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:padding="4dp"
+            android:src="@drawable/sign_67" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E6E6E6" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="#00000000"
+            android:drawableLeft="@drawable/sign_47"
+            android:drawablePadding="4dp"
+            android:password="true"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:maxLength="32"
+            android:textColor="#333333"
+            android:textSize="14dp" />
+
+       <LinearLayout
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_centerVertical="true"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <ImageView
+               android:id="@+id/img_visible"
+               android:padding="5dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/sign_75" />
+
+           <ImageView
+               android:id="@+id/cancel_two"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="5dp"
+               android:padding="6dp"
+               android:src="@drawable/sign_67" />
+       </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E6E6E6" />
+
+    <TextView
+        android:id="@+id/faster_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="30dp"
+        android:text="手机快捷登录"
+        android:textColor="#fdcd00" />
+
+    <TextView
+        android:id="@+id/text_login"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sign_52"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@color/color_gray_999999" />
+
+    <TextView
+        android:id="@+id/forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:text="忘记密码？"
+        android:textColor="#999999" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center_horizontal">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:text="登录/注册代表你已同意"
+            android:textColor="#999999"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginBottom="40dp"
+            android:layout_toRightOf="@+id/text"
+            android:gravity="center"
+            android:text="《铠恩买手协议》"
+            android:textColor="#f4d66d"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_layout"
+        layout="@layout/top_title_layout" />
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_below="@+id/top_layout"
+        android:id="@+id/coordinatorLayout_f"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white_F5F5F5">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsimg_toolbar_f"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="#ffffff"
+                app:expandedTitleMarginStart="0dp"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <RelativeLayout
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/rl_top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="已有标签："
+                        android:textColor="@color/color_black_333333"
+                        android:textSize="14sp" />
+
+                    <com.knms.view.flowlayout.TagFlowLayout
+                        android:id="@+id/tag_flow_checked_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_label"></com.knms.view.flowlayout.TagFlowLayout>
+
+                    <TextView
+                        android:id="@+id/tv_no_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_label"
+                        android:layout_marginLeft="10dp"
+                        android:drawableLeft="@drawable/icon_hint"
+                        android:paddingBottom="10dp"
+                        android:drawablePadding="6dp"
+                        android:text="没有找到相关宝贝，推荐衣柜相关结果"
+                        android:textColor="@color/color_gray_999999"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <com.handmark.pulltorefresh.library.PullToRefreshRecyclerView
+            android:id="@+id/ptr_rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"></com.handmark.pulltorefresh.library.PullToRefreshRecyclerView>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <ImageButton
+        android:id="@+id/iv_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/top"
+        android:background="@color/no_color"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

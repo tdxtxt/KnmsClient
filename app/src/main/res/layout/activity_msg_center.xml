@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white_F5F5F5"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_title_layout" />
+
+    <include layout="@layout/network_status_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+            android:id="@+id/refresh_scrollView"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/item_msg_official"
+                    layout="@layout/item_msg"/>
+
+                <include
+                    android:id="@+id/item_msg_kf"
+                    layout="@layout/item_msg" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_im_msgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_white" />
+            </LinearLayout>
+        </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_line_color"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</LinearLayout>
